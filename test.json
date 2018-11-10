@@ -1,0 +1,32 @@
+[
+	{
+		"firstName" : "Arup",
+		"lastName" : "Biswas",
+		"gender" : "Male",
+		"salary" : 20000
+	},
+	{
+		"firstName" : "Dipanjan",
+		"lastName" : "De",
+		"gender" : "Male",
+		"salary" : 20000
+	},
+	{
+		"firstName" : "Abhirup",
+		"lastName" : "De",
+		"gender" : "Male",
+		"salary" : 15000
+	},
+	{
+		"firstName" : "Rohit",
+		"lastName" : "Roy",
+		"gender" : "Male",
+		"salary" : 30000
+	},
+	{
+		"firstName" : "Arunima",
+		"lastName" : "Das",
+		"gender" : "Female",
+		"salary" : 25000
+	}
+]
