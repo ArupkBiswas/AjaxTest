@@ -1,0 +1,65 @@
+#loadingScreen
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(192, 192, 192, 0.5);
+    background-image: url("../images/loader2.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+//Loader
+function onReady(callback)
+{
+    var intervalID = window.setInterval(checkReady, 3000);
+    function checkReady()
+    {
+        if (document.getElementsByTagName('body')[0] !== undefined)
+        {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
+function show(id, value)
+{
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+onReady(function ()
+{
+    show('page', true);
+    show('loadingScreen', false);
+});
+
+
+<div class="loadingScreen" id="loadingScreen"></div>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="coustomCss/style.css">
+    <link rel="stylesheet" type="text/css" href="coustomCss/loadingScreen.css">
+
+    <script type="text/javascript" src="allJS/loadingScreen.js"></script>
+</head>
+<body>
+    <div class="loadingScreen" id="loadingScreen">
+        <div class="heartbeatloader">
+        <svg class="svgdraw" width="100%" height="100%" viewBox="0 0 150 400" xmlns="http://www.w3.org/2000/svg" >
+            <path class="path" d="M 0 200 l 40 0 l 5 -40 l 5 40 l 10 0 l 5 15 l 10 -140 l 10 220 l 5 -95 l 10 0 l 5 20 l 5 -20 l 30 0" fill="transparent" stroke-width="4" stroke="black"/>
+        </svg>
+        <div class="innercircle"></div>
+        <div class="outercircle"></div>
+    </div>  
+    </div>
+</body>
+</html>
